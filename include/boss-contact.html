@@ -1,0 +1,21 @@
+<script>
+	$(document).ready(function(){
+		$("#contact-by-line").on("click",function(){
+			//console.log("line");
+			$("#popup").load("/anitag/include/contact-by-line.html");
+			$("#popup").show();
+		});
+	})
+</script>
+		
+<div style="background-color:#1a1a1a; padding:1em 2em 3em 2em; color:#fff;">
+<span style="font-size:1.2em; width:100%; text-align:center; display:block;">My Boss : Panitta<br />
+	<span style="display:block; width:100%; margin-top:0.5em; font-size:1.2em;">
+		<a href="tel:086-083-5327"><span class="icon-phone-outline"></span></a>&nbsp;&nbsp;&nbsp;
+		<a href="mailto:happyrichwayh@gmail.com?subject=Someone found your dog
+&body=I meet dog's name Ramboo. Please contact me (......leave your contact here.....)"><span class="icon-mail"></span></a>&nbsp;&nbsp;&nbsp;
+		<a href="https://www.facebook.com/charuspisan" target="_blank"><span class="icon-facebook-circled"></span></a>&nbsp;&nbsp;&nbsp;
+		<a><span id="contact-by-line" class="icon-line-icon"></span></a>
+	</span>	
+</span>
+</div>

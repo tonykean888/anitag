@@ -1,0 +1,48 @@
+<script>
+	$(document).ready(function(){
+		
+		var mySwiper2 = new Swiper ('.info-swiper-container', {
+		  // Optional parameters
+		  direction: 'horizontal',
+		  loop: true,
+		  pagination: '.swiper-pagination',
+		  //paginationClickable: true
+		});
+		
+		$("#info-wrapper").hide();
+		$("#boss-wrapper").hide();
+		
+		$("#info-panel-up-bt").on("click",function(){
+			$("#info-wrapper, #boss-wrapper").toggle();
+			$(".footer-left, .footer-right").toggleClass("opa50 opa90");
+			$(this).toggleClass("icon-contacts icon-cancel icon shadow");
+		});
+	})
+</script>
+
+		<!-- Slider main container -->
+		<div class="info-swiper-container" style="position:relative; margin-top:2.5em;">
+			<!-- Additional required wrapper -->
+			<div class="swiper-wrapper">
+				<!-- Slides -->
+				<div class="swiper-slide" style="background-color: rgba(255, 255, 255, 0.9); font-size:1.2em; height:auto;">
+					<div style="padding:1.5em;">
+						<span style="padding:0.25em 0em; display:block; border-bottom:solid #ccc 1px; margin-bottom:0.8em;">Name : Ramboo</span>
+						<span style="padding:0.25em 0em; display:block; border-bottom:solid #ccc 1px; margin-bottom:0.8em;">Breed : Yatigar</span>
+						<span style="padding:0.25em 0em; display:block; border-bottom:solid #ccc 1px; margin-bottom:0.8em;">Age : 2y. 4m.</span>
+						<span style="padding:0.25em 0em; display:block; border-bottom:solid #ccc 1px; margin-bottom:0.8em;">Sex : Male</span>
+					</div>
+				</div>
+				<div class="swiper-slide" style="background-color: rgba(255, 255, 255, 0.9); font-size:1.2em; height:auto;">
+					<div style="padding:1.5em;">
+						<span style="padding:0.25em 0em; display:block; border-bottom:solid #ccc 1px; margin-bottom:0.8em;">infomation 1 : infomation</span>
+						<span style="padding:0.25em 0em; display:block; border-bottom:solid #ccc 1px; margin-bottom:0.8em;">infomation 2 : infomation</span>
+						<span style="padding:0.25em 0em; display:block; border-bottom:solid #ccc 1px; margin-bottom:0.8em;">infomation 3 : infomation</span>
+						<span style="padding:0.25em 0em; display:block; border-bottom:solid #ccc 1px; margin-bottom:0.8em;">infomation 4 : infomation</span>
+					</div>
+				</div>
+				<!-- <div class="swiper-slide">Slide 3</div> -->
+			</div>
+			<!-- If we need pagination -->
+			<div class="swiper-pagination"></div>
+		</div>	

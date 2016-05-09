@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui"> -->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="">
+<title>Anitag</title>
+<link rel="stylesheet" href="/anitag/assets/style/main.css">
+<link rel="stylesheet" href="/anitag/assets/style/animation.css">
+<link rel="stylesheet" href="/anitag/assets/style/anitag_icon.css">
+<link rel="stylesheet" href="/anitag/assets/style/swiper.min.css">
+<script src="/anitag/assets/js/jquery-1.12.3.min.js"></script>
+<script src="/anitag/assets/js/swiper.jquery.min.js"></script>
+
+<style>
+	#footer-wrapper {display:block; width:100%; position:absolute; bottom:0px; z-index: 99;}
+	.footer-left {display:block; float: left; height:2.5em; width:50%; -webkit-border-top-right-radius: 1em; -moz-border-radius-topright: 1em; border-top-right-radius: 1em; padding:0.5em;}
+	.footer-right {display:block; float: right; height:2.5em; width:50%; -webkit-border-top-left-radius: 1em; -moz-border-radius-topleft: 1em; border-top-left-radius: 1em; padding:0.5em; text-align:right;}
+	.icon {color:#fff;}
+	.shadow {text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);}
+	.normal-shadow {-webkit-box-shadow: 1px 1px 0px 1px rgba(0,0,0,0.75); -moz-box-shadow: 1px 1px 0px 1px rgba(0,0,0,0.75); box-shadow: 1px 1px 0px 1px rgba(0,0,0,0.75);}
+	.opa50 {background-color: rgba(255, 255, 255, 0.5);}
+	.opa90 {background-color: rgba(255, 255, 255, 0.9);}
+	.swiper-container { width: 100%; height: 100%;}
+	.swiper-slide {height:100vh;}
+	.light-gray-hover {background-color:#e4e4e4;}
+</style>
+
+<script>
+	$(document).ready(function(){
+		
+		//initialize swiper when document ready  
+		var mySwiper1 = new Swiper ('.img-swiper-container', {
+		  // Optional parameters
+		  direction: 'horizontal',
+		  loop: true,
+		  //pagination: '.swiper-pagination',
+		  //paginationClickable: true
+		}) 
+		
+		$("#footer-wrapper").load("/anitag/include/footer.html");
+		$("#HBMenu-bt").on("click",function(){
+			$("#HBMenu-panel").toggle();
+			$(this).toggleClass("icon shadow");
+		});
+		
+		$("#boss-signin-bt, #quick-claim-bt, #signup-bt").hover(function(){$(this).addClass("light-gray-hover")}, function(){ $(this).removeClass("light-gray-hover")})
+	})
+</script>
+</head>
+
+<body style="background-color:gray;">
+<div id="page-wrapper" style="height:100vh;">
+
+	<div id="header-wrapper" style="position:absolute; width: 100%; z-index: 98; margin-top:1.5em;">
+		<span style="display:block; width:100%; text-align:center; padding:0.5em 0.5em 0.5em 1.5em;">
+			<span class="shadow" style="font-size:1.5em; color:#fff; ">RAMBOO</span>
+			<span id="HBMenu-bt" class="icon icon-menu shadow" style="float:right;"></span>
+		</span>
+	</div>
+	
+	<div id="HBMenu-panel" style="z-index: 97; position:absolute; margin-top:1.5em; display:none;">
+	
+		<div style="width:2.4em; height:2em; background-color:rgba(255,255,255,0.9); -webkit-border-top-left-radius: 5px; -webkit-border-top-right-radius: 5px; -moz-border-radius-topleft: 5px; -moz-border-radius-topright: 5px; border-top-left-radius: 5px; border-top-right-radius: 5px; float:right;"></div>
+		<div style="width:100vw; height:8.5em; background-color:rgba(255,255,255,0.9); margin-top:1.65em; padding:1em; font-size:1.2em;">
+			<span id="boss-signin-bt" style="display:inline-block; width:48%; height:100%; border:solid 1px #ccc; float:left; text-align:center; padding-top: 2em;">
+				<span class="icon-lock-open"></span><br />Boss sign in
+			</span>
+			<span style="display:inline-block; width:48%; height:100%; float:right;">
+				<span id="quick-claim-bt" style="display:block; width:100%; height:48%; border:solid 1px #ccc; margin-bottom:4%; text-align:center; padding-top: 0.5em;">
+					<span class="icon-search-outline"></span><br />Quick tag claim
+				</span>
+				<span id="signup-bt" style="display:block; width:100%; height:48%; border:solid 1px #ccc; text-align:center; padding-top: 0.5em;">
+					<span class="icon-pencil"></span><br />Sign up
+				</span>
+			</span>
+		</div>
+	
+	</div>
+	
+	<div id="popup" style="display:none; position:fixed; z-index: 101;"></div>
+	
+	<div id="content-wrapper" style="position: fixed; width:100%;">
+			<!-- Slider main container -->
+		<div class="img-swiper-container" style="background-color:green;">
+			<!-- Additional required wrapper -->
+			<div class="swiper-wrapper">
+				<!-- Slides -->
+				<div class="swiper-slide" style="background: #000 url('/anitag/images/slide1.jpg') no-repeat; background-size: 100% auto;"></div>
+				<div class="swiper-slide" style="background: #000 url('/anitag/images/slide2.jpg') no-repeat; background-size: 100% auto;"></div>
+				<!-- <div class="swiper-slide">Slide 3</div> -->
+			</div>
+			<!-- If we need pagination -->
+			<!-- <div class="swiper-pagination"></div> -->
+			
+			<!-- If we need navigation buttons -->
+			<div class="icon icon-left-open-outline shadow" style="position: absolute; top: 50%; z-index: 97; left: 0.1em; font-size: 2em; opacity:0.5;"></div>
+			<div class="icon icon-right-open-outline shadow" style="position: absolute; top: 50%; z-index: 97; right: 0.1em; font-size: 2em; opacity:0.5;"></div>
+			
+			<!-- If we need scrollbar -->
+			<!-- <div class="swiper-scrollbar"></div> -->
+	</div>
+	<div id="footer-wrapper">
+	
+	</div>
+
+
+	
+</div>
+</body>
+
+</html>
