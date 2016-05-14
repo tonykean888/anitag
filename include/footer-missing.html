@@ -1,0 +1,40 @@
+<script>
+	$(document).ready(function(){
+		
+		$("#info-wrapper-missing").load("/include/info-panel-missing.html");
+		$("#boss-wrapper-missing").load("/include/boss-contact.html");
+		
+		$("#missing-info-bt").on("click",function(){
+			$("#info-wrapper-missing, #wanted-ms-wrapper, #info-panel-up-bt-missing").toggle();
+			$(".footer-left-missing, .footer-right-missing").toggleClass("opa90");
+			$(this).toggle();
+		});
+		
+		$("#info-panel-up-bt-missing").on("click",function(){
+			$("#info-wrapper-missing, #wanted-ms-wrapper, #missing-info-bt").toggle();
+			$(".footer-left-missing, .footer-right-missing").toggleClass("opa90");
+			$(this).toggle();
+		});
+	
+	})
+</script>
+		<div>
+			<span class="footer-left-missing">
+				<img src="/images/anitag-logo.png" style="height:100%;">
+			</span><span class="footer-right-missing">
+				<span id="missing-info-bt" class="round4conners" style="font-size:1.2em; color:#fff; background-color:#007aff; padding:0.25em 0.5em; display:inline-block; border:solid 1px #fff;">More Profile</span>
+				<span id="info-panel-up-bt-missing" class="icon-cancel" style="font-size:1.5em; display:none;"></span>
+			</span>
+		</div>
+		
+		<div class="clear"></div>
+		
+		<div id="wanted-ms-wrapper" style="margin-top:0.5em;">
+			<span style="display:block; padding:0.5em; background-color:red; color:#fff; font-weight:bold; font-size:2em; text-align:center; font-family:sans-serif;">MISSING!!!</span>
+			<span class="opa90" style="display:block; padding:0.5em; font-size:1.2em; text-align:center;">Who can found him.<br />Get 5,000 Baht from me.</span>
+		</div>
+		
+		<div id="info-wrapper-missing" style="width: 100%; z-index: 99;"></div>
+		<div id="boss-wrapper-missing" style="width: 100%; z-index: 99;"></div>
+		
+		

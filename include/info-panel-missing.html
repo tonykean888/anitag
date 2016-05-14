@@ -9,19 +9,13 @@
 		  //paginationClickable: true
 		});
 		
-		$("#info-wrapper").hide();
-		$("#boss-wrapper").hide();
+		$("#info-wrapper-missing").hide();
 		
-		$("#info-panel-up-bt").on("click",function(){
-			$("#info-wrapper, #boss-wrapper").toggle();
-			$(".footer-left, .footer-right").toggleClass("opa50 opa90");
-			$(this).toggleClass("icon-contacts icon-cancel icon shadow");
-		});
 	})
 </script>
 
 		<!-- Slider main container -->
-		<div class="info-swiper-container" style="position:relative; margin-top:2.5em;">
+		<div class="info-swiper-container" style="position:relative;">
 			<!-- Additional required wrapper -->
 			<div class="swiper-wrapper">
 				<!-- Slides -->
@@ -46,7 +40,13 @@
 						<span style="padding:0.25em 0em; display:block; border-bottom:solid #ccc 1px; margin-bottom:0.8em;">Blood : B</span>
 						<span style="padding:0.25em 0em; display:block; border-bottom:solid #ccc 1px; margin-bottom:0.8em;">Vaccine information : N/A</span>
 						<span style="padding:0.25em 0em; display:block; border-bottom:solid #ccc 1px; margin-bottom:0.8em;">Address : 299/48 Klong-samwa BKK</span>
-						<!-- <span style="padding:0.25em 0em; display:block; border-bottom:solid #ccc 1px; margin-bottom:0.8em;">Last location: infomation</span> -->
+					</div>
+				</div>
+				<div class="swiper-slide" style="background-color: rgba(255, 255, 255, 0.9); font-size:1.2em; height:auto;">
+					<div style="padding:1.5em;">
+						<span style="padding:0.25em 0em; display:block; border-bottom:solid #ccc 1px; margin-bottom:0.8em;">Last location:</span>
+							<img src="/images/map.jpg" style="width:100%; height:auto;">
+						</span>
 					</div>
 				</div>
 			</div>

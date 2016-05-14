@@ -67,4 +67,15 @@ body {
   -moz-box-sizing: inherit;
   box-sizing: inherit;
 }
+#footer-wrapper {display:block; width:100%; position:absolute; bottom:0px; z-index: 99;}
+.footer-left, .footer-left-missing {display:block; float: left; height:2.5em; width:50%; -webkit-border-top-right-radius: 1em; -moz-border-radius-topright: 1em; border-top-right-radius: 1em; padding:0.5em;}
+.footer-right, .footer-right-missing {display:block; float: right; height:2.5em; width:50%; -webkit-border-top-left-radius: 1em; -moz-border-radius-topleft: 1em; border-top-left-radius: 1em; padding:0.5em; text-align:right;}
+.icon {color:#fff;}
+.shadow {text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);}
+.normal-shadow {-webkit-box-shadow: 1px 1px 0px 1px rgba(0,0,0,0.75); -moz-box-shadow: 1px 1px 0px 1px rgba(0,0,0,0.75); box-shadow: 1px 1px 0px 1px rgba(0,0,0,0.75);}
+.opa50 {background-color: rgba(255, 255, 255, 0.5);}
+.opa90 {background-color: rgba(255, 255, 255, 0.9);}
+.light-gray-hover {background-color:#e4e4e4;}
+.round4conners { -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;}
+.clear {clear:both;}
 	
